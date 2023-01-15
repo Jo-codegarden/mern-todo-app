@@ -2,6 +2,9 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import loginRequest from "../api/loginRequest";
 import { TokenContext } from "../App";
+import Fab from '@mui/material/Fab';
+import NavigationIcon from '@mui/icons-material/Navigation';
+import { Footer } from "../components/Footer";
 
 export const LoginPage = () => {
     const [password, setPassword] = useState('');
@@ -23,12 +26,19 @@ export const LoginPage = () => {
 
     return (
     <div>
-        <h1>Login</h1>
-        <div style={{color: "red"}}>{error}</div>
+        <h1 className="box" id="heading">Login</h1>
+        <div style={{color: "red", marginLeft: "-200px"}}>{error}</div>
         <form onSubmit={handleLogin}>
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <button>Login</button>
+            <div>
+                <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="password: 'abc'" id="password"/>
+                <button>
+                    <Fab>
+                        <NavigationIcon />
+                    </Fab>
+                </button>
+            </div>
         </form>
+        <Footer style={{marginTop: "100vh"}} />
     </div>
     )
 }

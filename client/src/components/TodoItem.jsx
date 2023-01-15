@@ -44,7 +44,7 @@ const TodoItem = ({todo}) => {
     }, [text]); // will call a callback function every time someone types into input box
 
     return (
-        <div >
+        <div>
             <input checked={todo.completed} type="checkbox" onChange={() => updateTodo({
                 ...todo, 
                 completed: !todo.completed
