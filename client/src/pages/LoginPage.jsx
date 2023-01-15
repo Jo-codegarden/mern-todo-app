@@ -28,10 +28,10 @@ export const LoginPage = () => {
     <div>
         <h1 className="box" id="heading">Login</h1>
         <div style={{color: "red", marginLeft: "-200px"}}>{error}</div>
-        <form onSubmit={handleLogin}>
+        <form className="box" onSubmit={handleLogin}>
             <div>
                 <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="password: 'abc'" id="password"/>
-                <button>
+                <button style={{transform: 'translateY(-5%)'}}>
                     <Fab>
                         <NavigationIcon />
                     </Fab>
