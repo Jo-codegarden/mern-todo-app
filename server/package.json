@@ -1,10 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,7 @@
     "mongoose": "^6.8.3",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
