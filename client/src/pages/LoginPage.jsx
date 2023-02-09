@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import loginRequest from "../api/loginRequest";
 import { TokenContext } from "../App";
-import Fab from '@mui/material/Fab';
 import NavigationIcon from '@mui/icons-material/Navigation';
 import { Footer } from "../components/Footer";
 
@@ -31,10 +30,8 @@ export const LoginPage = () => {
         <form className="box" onSubmit={handleLogin}>
             <div>
                 <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="password: 'abc'" id="password"/>
-                <button style={{transform: 'translateY(-5%)'}}>
-                    <Fab>
+                <button className="login-button" style={{transform: 'translateY(20%)'}}>
                         <NavigationIcon />
-                    </Fab>
                 </button>
             </div>
         </form>
