@@ -26,10 +26,13 @@ h1 {
 button {
   background: none;
   border: none;
+  float: right center;
+  margin: 20px;
 }
 
 input[type="checkbox"] {
   margin: 20px;
+  float: left;
 }
 
 p {
@@ -40,11 +43,6 @@ p {
   color: #00204a;
 }
 
-/* form.item {
-  text-align: center;
-  margin-left: 20px;
-} */
-
 input[type="text"] {
   text-align: left;
   height: 60px;
@@ -53,7 +51,6 @@ input[type="text"] {
   background: transparent;
   font-size: 20px;
   font-weight: 200;
-  width: 313px;
 }
 
 input[type="text"]:focus {
@@ -88,4 +85,12 @@ footer {
 .login-button:hover {
   background-color: #A683E3;
   border-radius: 20%;
+}
+.input-items {
+  display: flex;
+}
+
+.input-items > input[type="text"] {
+  width: 76%;
+  font-weight: 400;
 }

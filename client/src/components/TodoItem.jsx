@@ -44,14 +44,14 @@ const TodoItem = ({todo}) => {
     }, [text]); // will call a callback function every time someone types into input box
 
     return (
-        <div>
-            <input checked={todo.completed} type="checkbox" onChange={() => updateTodo({
-                ...todo, 
-                completed: !todo.completed
-            })} />
-            <input type="text" value={text}  onChange={(e) => setText(e.target.value)} />
-            <IconButton aria-label="delete" size="small" onClick={() => deleteTodo(todo)}><DeleteIcon fontSize="inherit" />
-            </IconButton>
+        <div className="input-items">
+                <input checked={todo.completed} type="checkbox" onChange={() => updateTodo({
+                    ...todo, 
+                    completed: !todo.completed
+                })} />
+                <input type="text" value={text}  onChange={(e) => setText(e.target.value)} />
+                <IconButton aria-label="delete" size="small" onClick={() => deleteTodo(todo)}><DeleteIcon fontSize="inherit" />
+                </IconButton>
         </div>
     );
 }
